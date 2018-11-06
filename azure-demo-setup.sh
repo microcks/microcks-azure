@@ -3,9 +3,13 @@
 HOSTNAME=$1
 VERSION=$2
 
-sudo apt-get install jq docker-compose -y
+sudo apt-get install -y jq docker-compose
 
 git clone https://github.com/microcks/microcks.git
+if [ "$VERSION" != "latest" ]; then
+  git checkout tags/$VERSION
+fi
+
 cd microcks/install/docker-compose/
 cp keycloak-realm/microcks-realm-sample.json keycloak-realm/microcks-realm-sample.json.bak
 

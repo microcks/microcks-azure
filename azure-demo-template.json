@@ -358,7 +358,7 @@
                 "publicIPAllocationMethod": "Static",
                 "idleTimeoutInMinutes": 4,
                 "dnsSettings": {
-                    "domainNameLabel": "[parameters('dnsName')]"
+                    "domainNameLabel": "[parameters('vmName')]"
                 },
                 "ipTags": []
             },
