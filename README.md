@@ -24,3 +24,15 @@ This template is just using 4 parameters:
 * `sshKeyData` will be the corresponding Public SSH key for administrator access to VM,
 * `vmName` should be the globally unique name for this VM. It will be used for complete FQDN name creation,
 * `microcksVersion` is the tagged version of Microcks you want to install. Default is `latest` which ... is the latest!
+
+### Start microcks
+
+Once VM is created on Azure, just connect to it and start Microcks using these commands:
+
+```
+$ ssh -A <adminUsername>@<VM Public IP>
+$ cd /opt/microcks/install/docker-compose
+$ sudo docker-compose -f microcks.yml up -d
+```
+
+Wait for a few seconds everything has started and then test Microcks!
