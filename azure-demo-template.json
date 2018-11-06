@@ -120,7 +120,7 @@
             "properties": {
               "publisher": "Microsoft.OSTCExtensions",
               "type": "CustomScriptForLinux",
-              "typeHandlerVersion": "1.9",
+              "typeHandlerVersion": "1.5",
               "settings": {
                 "fileUris": [ "[concat(variables('baseTemplateUrl'), 'azure-demo-setup.sh')]" ],
                 "commandToExecute": "[concat('sh azure-demo-setup.sh ', reference(variables('publicIPAddresses_microcks_ip_name')).dnsSettings.fqdn, ' ', parameters('microcksVersion'))]"
